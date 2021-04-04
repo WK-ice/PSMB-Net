@@ -22,7 +22,7 @@ Using this code by running main.py, several settings are provided in the top of 
 
 (2) Calculate tumor-wise balance factor for each tumor. The voxel value of tumor label can be used to storing the factor, and an element-wise multiply of tumor label and probability map after softmax is performed during loss calculation.
 
-(3) Prepare data. Using a .tfrecord file to store all the modalities and labels of a patient. The image should be volumetric, the shape should be (slice row pixel number, slice column pixel number, slice number). A random shuffled list, with each element of the list is the patient name, should be stored in disk. This can be implemented by using python package "pickle".
+(3) Using a .tfrecord file to store all the modalities and labels of a patient. The image should be volumetric, the shape should be (slice row pixel number, slice column pixel number, slice number). A random shuffled list, with each element of the list is the patient name, should be stored in disk. This can be implemented by using python package "pickle".
 
 (4) Change the settings in main.py to fit your environments, and set the mode='train' to start training. If the training process is interupted by incident, you can set restore='True' and mode='train' to restore the parameters before the incident.
 
