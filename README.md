@@ -2,12 +2,12 @@
 A whole-body PET/CT tumor segmentation method using position supervised multi-branch neural network.
 
 ## 1 Introduction
-This project is a position supervised multi-branch neural network (PSMB-Net), which is a segmentation method for whole-body PET/CT images that can be used for whole-body metabolic tumor volume(MTVwb) calculation. This method is CNN-based, utilizing relative position of slices, and a multi-branch structural design for feature extraction and fusion. We separate whole-body to two semi-bodies by the lower bound of lung to reduce learning difficulty. To accommodate the remarkable visual differences of two semi-bodies, our design includes two decoders to learn features from them separately. The relative position of slices is used to guide the separation of PET/CT images into upper and lower semi-bodies. It also embeds inherent location information in feature maps to guide segmentation.
+This project is a position supervised multi-branch neural network (PSMB-Net), which is a segmentation method for whole-body PET/CT images. This method is CNN-based, utilizing relative position of slices, and a multi-branch structural design for feature extraction and fusion. We separate whole-body to two semi-bodies by the lower bound of lung to reduce learning difficulty. To accommodate the remarkable visual differences of two semi-bodies, our design includes two decoders to learn features from them separately. The relative position of slices is used to guide the separation of PET/CT images into upper and lower semi-bodies. It also embeds inherent location information in feature maps to guide segmentation.
 
 ## 2 Method
-<img width="1031" alt="image" src="https://user-images.githubusercontent.com/71493468/113496441-29f5b400-952c-11eb-9ff5-30eb021f64da.png">
 The PSMB-Net consists of four components, including (A) positional learning on the CT slices, (B) CT feature fusion, (C) gate signal generation, and (D) PET/CT feature fusion and gating.
 
+<img width="1031" alt="image" src="https://user-images.githubusercontent.com/71493468/113496441-29f5b400-952c-11eb-9ff5-30eb021f64da.png">
 <img width="646" alt="image" src="https://user-images.githubusercontent.com/71493468/113496751-4b0bd400-952f-11eb-94db-84e7ac796d0e.png">
 
 ## 3 Experiments
