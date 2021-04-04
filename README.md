@@ -17,6 +17,7 @@ Our data included de-identified whole-body PET/CT scans from 480 lung cancer pat
 This code is based on python 3.7.3 and Tensorflow 1.14.0.
 
 Using this code by running main.py, several settings are provided in the top of this file to fit a specific environment. Following is our recommanded using process:
+
 (1) Manual assign two slices as reference for each patient,one slice is at the level of greater tubercle of the humerus and the other slice is at the level of the lumbar vertebrae.
 
 (2) Calculate tumor-wise balance factor for each tumor. The voxel value of tumor label can be used to storing the factor, and an element-wise multiply of tumor label and probability map after softmax is performed during loss calculation.
