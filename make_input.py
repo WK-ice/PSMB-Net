@@ -1,5 +1,4 @@
 import tensorflow as tf
-#import glob
 import os
 import pickle
 
@@ -56,7 +55,8 @@ def parse_total_patient(patientPath,startIndex,endIndex,isTraining):
         
         pt = tf.expand_dims(pt,axis=-1)
         #The parameter 'a' of tumor-wise balance factor.
-        tu = tf.expand_dims(tu,axis=-1)*tf.constant(10000,tf.float32)
+        a = 10000
+        tu = tf.expand_dims(tu,axis=-1)*tf.constant(a,tf.float32)
         
         tuCond = tf.equal(tf.constant(0,dtype=tf.float32),tu)
         zeros = tf.zeros_like(tu,dtype=tf.float32)
