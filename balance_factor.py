@@ -23,7 +23,7 @@ for patient in patientList:
         tumorsCopy = copy.deepcopy(tumors)
         tumorsCopy[tumors!=i+1] = 0
         tumorPixel = np.count_nonzero(tumorsCopy)
-        #Line 25 is corresponding to f(Ti)=a/(T_i^b).
+        #Line 27 is corresponding to f(Ti)=a/(T_i^b).
         newValue = a/tumorPixel**(b)
         tumorNew[tumors==i+1] = newValue
         print(tumorPixel,newValue)
