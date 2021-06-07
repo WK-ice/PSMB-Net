@@ -287,7 +287,7 @@ class Network(object):
     def get_crossEntropy_loss(self,softmax):
         softmax_log = tf.math.log(softmax+1e-8)
         concatLabel = tf.concat(self.label[0:2],axis=-1)
-        loss = -tf.reduce_mean(concatLabel*softmax_log)
+        loss = tf.reduce_mean(-tf.reduce_sum(concatLabel*softmax_log,axis=-1))
         return loss
     
     def get_binary_prediction(self):
