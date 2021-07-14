@@ -38,8 +38,8 @@ def crf(readPath,refine_output_path,patientList,use_crf=True):
         print('Thread finished.')
 
 if __name__ == '__main__':
-    readPath = '/media/wangkun/Data/wangkun/GPU-3/src21/test_output'
-    refine_output_path = '/media/wangkun/Data/wangkun/GPU-3/src21/test_output_refine'
+    readPath = "  "
+    refine_output_path = "  "
     os.mkdir(refine_output_path)
     patientList = os.listdir(readPath)
     sharedList = mp.Manager().list()
