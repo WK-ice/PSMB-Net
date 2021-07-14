@@ -87,6 +87,5 @@ def get_all_metrics(readPath,writePath):
     return
 
 if __name__ == "__main__":
-    get_all_metrics("/media/wangkun/Data2/实验结果/src21/全身/5/test_output_refine", \
-                    "/media/wangkun/Data2/实验结果/src21/全身/5/metrics_noCRF.xlsx")
+    get_all_metrics("readPath", "writePath")
     
