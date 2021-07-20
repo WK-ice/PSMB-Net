@@ -11,7 +11,7 @@ The PSMB-Net consists of four components, including (A) positional learning on t
 <img width="646" alt="image" src="https://user-images.githubusercontent.com/71493468/113496751-4b0bd400-952f-11eb-94db-84e7ac796d0e.png">
 
 ## 3 Experiments
-Our data included de-identified whole-body PET/CT scans from 480 lung cancer patients. Dice, Sensitivity, and Precision are as metrics to evaluate the performance. Our PSMB-Net archived 0.580, 0.616, and 0.688, for Dice, Sensitivity and Precision, respectively.
+Our data included de-identified whole-body PET/CT scans from 480 lung cancer patients. Dice, Sensitivity, and Precision are as metrics to evaluate the performance. 
 
 ## 4 Code usage
 This code is based on python 3.7.3 and Tensorflow 1.14.0.
